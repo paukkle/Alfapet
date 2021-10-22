@@ -1,7 +1,7 @@
 from linkedlist import LinkedList
 
 
-class AlphapetPlayers:
+class AlfapetPlayers:
     def __init__(self):
         self.__players = None
 
@@ -49,7 +49,7 @@ class AlphapetPlayers:
 
 class Game:
     def __init__(self):
-        self.alphapet = AlphapetPlayers()
+        self.alphapet = AlfapetPlayers()
         self.players = []
         self.running = True
 
