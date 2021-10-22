@@ -49,7 +49,7 @@ class AlfapetPlayers:
 
 class Game:
     def __init__(self):
-        self.alphapet = AlfapetPlayers()
+        self.alfapet = AlfapetPlayers()
         self.players = []
         self.running = True
 
@@ -66,7 +66,7 @@ class Game:
             break
 
     def set_players(self):
-        self.alphapet.players = self.players
+        self.alfapet.players = self.players
 
     def players_setup(self):
         self.get_players()
@@ -82,7 +82,7 @@ class Game:
     def new_game(self):
         choice = self.get_choice()
         if choice:
-            self.alphapet.zero_points()
+            self.alfapet.zero_points()
             return
         self.running = False
 
@@ -93,17 +93,17 @@ class Game:
             print("No players. Exiting.")
             return
         print("Game starting.")
-        self.alphapet.print_players()
+        self.alfapet.print_players()
 
         while self.running:
-            for player in self.alphapet.players:
+            for player in self.alfapet.players:
                 print(f"{player.name}'s turn. Enter non-numerical character to finish the game.")
                 try:
                     points = int(input("Points: "))
-                    self.alphapet.add_points(player, points)
+                    self.alfapet.add_points(player, points)
                 except ValueError:
                     break
-            self.alphapet.show_points()
+            self.alfapet.show_points()
             self.new_game()
         
 
